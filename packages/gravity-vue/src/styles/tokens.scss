@@ -1,0 +1,23 @@
+@import './themes';
+
+@layer tokens {
+  :where(:root, :host) {
+    @include g-theme-common;
+
+    // [data-g-theme=light] {
+    //   @include g-theme-light;
+    // }
+
+    &[data-g-theme=dark] {
+      @include g-theme-dark;
+    }
+
+    // [data-g-theme=light-hc] {
+    //   @include g-theme-light-hc;
+    // }
+
+    // [data-g-theme=dark-hc] {
+    //   @include g-theme-dark-hc;
+    // }
+  }
+}

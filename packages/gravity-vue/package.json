@@ -1,0 +1,65 @@
+{
+  "name": "gravity-vue",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.0.2",
+  "description": "Gravity UI base styling and components",
+  "author": "blasdfaa",
+  "license": "MIT",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    },
+    "./styles.css": "./dist/style.css",
+    "./package.json": "./package.json"
+  },
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "typesVersions": {
+    "*": {
+      "*": [
+        "./dist/*",
+        "./dist/index.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "vite build",
+    "typecheck": "vue-tsc",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
+    "story:preview": "histoire preview"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@antfu/utils": "^0.7.10",
+    "@bem-react/classname": "^1.6.0",
+    "@vueuse/core": "^11.0.0"
+  },
+  "devDependencies": {
+    "@histoire/plugin-vue": "^0.17.17",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "@vue/test-utils": "^2.4.6",
+    "histoire": "^0.17.17",
+    "sass": "^1.77.8",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.4.5",
+    "vite": "5.3.5",
+    "vite-plugin-dts": "4.0.0-beta.2",
+    "vue": "3.4.35",
+    "vue-tsc": "^2.0.29"
+  }
+}

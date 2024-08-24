@@ -1,0 +1,61 @@
+{
+  "name": "root",
+  "type": "module",
+  "version": "0.0.0",
+  "packageManager": "pnpm@9.0.2",
+  "description": "Gravity UI base styling and components",
+  "author": "blasdfaa",
+  "bugs": {
+    "url": "https://github.com/blasdfaa/gravity-vue/issues"
+  },
+  "engines": {
+    "node": ">= 20",
+    "pnpm": ">= 8",
+    "yarn": "Please use pnpm instead of yarn to install dependencies",
+    "npm": "Please use pnpm instead of npm to install dependencies"
+  },
+  "scripts": {
+    "build": "pnpm run build:packages",
+    "prepublishOnly": "pnpm run publint && pnpm run build",
+    "build:packages": "pnpm run build:vue",
+    "build:vue": "pnpm --filter gravity-vue build",
+    "lint": "eslint . --cache",
+    "release": "bumpp -r && pnpm publish",
+    "prepare": "simple-git-hooks",
+    "publint": "publint",
+    "typecheck": "pnpm --filter './packages/*' -r run typecheck",
+    "test": "pnpm --filter gravity-vue test"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "devDependencies": {
+    "@antfu/eslint-config": "2.24.1",
+    "@commitlint/cli": "^17.8.0",
+    "@commitlint/config-conventional": "^17.8.0",
+    "bumpp": "^9.4.0",
+    "eslint": "9.8.0",
+    "eslint-plugin-format": "^0.1.2",
+    "eslint-plugin-vuejs-accessibility": "^2.4.1",
+    "esno": "^4.7.0",
+    "lint-staged": "^15.2.2",
+    "pnpm": "^9.0.2",
+    "publint": "^0.2.7",
+    "rimraf": "^5.0.5",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "^5.4.5",
+    "vitest": "^2.0.5"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "simple-git-hooks": {
+    "pre-commit": "pnpm lint-staged",
+    "commit-msg": "pnpm commitlint --edit ${1}"
+  },
+  "lint-staged": {
+    "*": "eslint --fix"
+  }
+}
