@@ -20,6 +20,7 @@
     "build:packages": "pnpm run build:vue",
     "build:vue": "pnpm --filter gravity-vue build",
     "lint": "eslint . --cache",
+    "lint:fix": "pnpm run lint --fix",
     "release": "bumpp -r && pnpm publish",
     "prepare": "simple-git-hooks",
     "publint": "publint",

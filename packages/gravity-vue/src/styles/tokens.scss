@@ -8,7 +8,7 @@
     //   @include g-theme-light;
     // }
 
-    &[data-g-theme=dark] {
+    &[data-g-theme='dark'] {
       @include g-theme-dark;
     }
 

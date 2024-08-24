@@ -4,7 +4,7 @@
 
 <!--/GITHUB_BLOCK-->
 
-```tsx
+```ts
 import { Button } from '@gravity-ui/uikit'
 ```
 
@@ -43,7 +43,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <Button view="action" size="l">Action</Button>
 <Button view="normal" size="l">Normal</Button>
 <Button view="raised" size="l">Raised</Button>
@@ -84,7 +84,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <Button view="outlined" size="l">Outlined</Button>
 <Button view="outlined-action" size="l">Outlined Action</Button>
 <Button view="outlined-info" size="l">Outlined Info</Button>
@@ -133,7 +133,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <Button view="flat" size="l">Flat</Button>
 <Button view="flat-secondary" size="l">Flat Secondary</Button>
 <Button view="flat-action" size="l">Flat Action</Button>
@@ -169,7 +169,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <Button view="normal-contrast" size="l">Normal Contrast</Button>
 <Button view="outlined-contrast" size="l">Outlined Contrast</Button>
 <Button view="flat-contrast" size="l">Flat Contrast</Button>
@@ -238,7 +238,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <Button view="outlined" size="l">
     <Icon data={Gear} size={18} />
     Start
@@ -286,7 +286,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <Button size="l" disabled>Disabled</Button>
 <Button size="l" loading>Loading</Button>
 <Button size="l" selected>Selected</Button>
@@ -320,7 +320,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <Button size="xs">XS Size</Button>
 <Button size="s">S Size</Button>
 <Button size="m">M Size</Button>
@@ -426,7 +426,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <div>
     <Button view="action" size="l" pin="round-brick">Create</Button>
     <Button view="action" size="l" pin="brick-round">...</Button>

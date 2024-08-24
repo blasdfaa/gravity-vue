@@ -4,7 +4,7 @@
 
 <!--/GITHUB_BLOCK-->
 
-```tsx
+```ts
 import { TextInput } from '@gravity-ui/uikit'
 ```
 
@@ -34,7 +34,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <TextInput view="normal" />
 <TextInput view="clear" />
 ```
@@ -61,7 +61,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <TextInput pin="round-brick" />
 <TextInput pin="brick-brick" />
 <TextInput pin="brick-round" />
@@ -87,7 +87,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <TextInput disabled />
 ```
 
@@ -112,7 +112,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <TextInput errorMessage="Error message" validationState="invalid" />
 <TextInput errorPlacement="inside" errorMessage="Error message" validationState="invalid" />
 ```
@@ -147,7 +147,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <TextInput size="s" />
 <TextInput size="m" />
 <TextInput size="l" />
@@ -177,7 +177,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <TextInput label="Label" />
 ```
 
@@ -203,7 +203,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <TextInput leftContent={<Label>Left</Label>} />
 ```
 
@@ -227,7 +227,7 @@ LANDING_BLOCK-->
 
 <!--GITHUB_BLOCK-->
 
-```tsx
+```vue
 <TextInput rightContent={<Label>Right</Label>} />
 ```
 

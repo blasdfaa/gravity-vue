@@ -24,9 +24,9 @@
   position: relative;
 
   &::after {
-      content: '';
-      position: absolute;
-      inset: logical (-$v) (-$h) (-$v);
+    content: '';
+    position: absolute;
+    inset: logical (-$v) (-$h) (-$v);
   }
 }
 
@@ -45,114 +45,114 @@
   position: relative;
 
   &::before {
-      display: block;
-      content: '';
-      width: 100%;
-      padding-block-start: $ratio * 100%;
+    display: block;
+    content: '';
+    width: 100%;
+    padding-block-start: $ratio * 100%;
   }
 
   > *:only-child {
-      position: absolute;
-      inset: 0;
+    position: absolute;
+    inset: 0;
   }
 }
 
 @function get-pin-selector($mod, $selector, $append: true) {
   @if $append {
-      @return selector-append($mod, $selector);
+    @return selector-append($mod, $selector);
   } @else {
-      @return join($mod, $selector, $separator: space);
+    @return join($mod, $selector, $separator: space);
   }
 }
 
 @mixin pin($block, $selectors, $radius, $append: true) {
   @each $selector in $selectors {
-      &#{get-pin-selector(#{$block}_pin_round-round, $selector, $append)} {
-          border-radius: $radius;
-      }
+    &#{get-pin-selector(#{$block}_pin_round-round, $selector, $append)} {
+      border-radius: $radius;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_brick-brick, $selector, $append)} {
-          border-radius: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_brick-brick, $selector, $append)} {
+      border-radius: 0;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_clear-clear, $selector, $append)} {
-          border-radius: 0;
-          border-inline: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_clear-clear, $selector, $append)} {
+      border-radius: 0;
+      border-inline: 0;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_circle-circle, $selector, $append)} {
-          border-radius: 100px;
-      }
+    &#{get-pin-selector(#{$block}_pin_circle-circle, $selector, $append)} {
+      border-radius: 100px;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_round-brick, $selector, $append)} {
-          border-start-start-radius: $radius;
-          border-start-end-radius: 0;
-          border-end-start-radius: $radius;
-          border-end-end-radius: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_round-brick, $selector, $append)} {
+      border-start-start-radius: $radius;
+      border-start-end-radius: 0;
+      border-end-start-radius: $radius;
+      border-end-end-radius: 0;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_brick-round, $selector, $append)} {
-          border-start-start-radius: 0;
-          border-start-end-radius: $radius;
-          border-end-start-radius: 0;
-          border-end-end-radius: $radius;
-      }
+    &#{get-pin-selector(#{$block}_pin_brick-round, $selector, $append)} {
+      border-start-start-radius: 0;
+      border-start-end-radius: $radius;
+      border-end-start-radius: 0;
+      border-end-end-radius: $radius;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_round-clear, $selector, $append)} {
-          border-start-start-radius: $radius;
-          border-start-end-radius: 0;
-          border-end-start-radius: $radius;
-          border-end-end-radius: 0;
-          border-inline-end: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_round-clear, $selector, $append)} {
+      border-start-start-radius: $radius;
+      border-start-end-radius: 0;
+      border-end-start-radius: $radius;
+      border-end-end-radius: 0;
+      border-inline-end: 0;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_clear-round, $selector, $append)} {
-          border-start-start-radius: 0;
-          border-start-end-radius: $radius;
-          border-end-start-radius: 0;
-          border-end-end-radius: $radius;
-          border-inline-start: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_clear-round, $selector, $append)} {
+      border-start-start-radius: 0;
+      border-start-end-radius: $radius;
+      border-end-start-radius: 0;
+      border-end-end-radius: $radius;
+      border-inline-start: 0;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_brick-clear, $selector, $append)} {
-          border-radius: 0;
-          border-inline-end: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_brick-clear, $selector, $append)} {
+      border-radius: 0;
+      border-inline-end: 0;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_clear-brick, $selector, $append)} {
-          border-radius: 0;
-          border-inline-start: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_clear-brick, $selector, $append)} {
+      border-radius: 0;
+      border-inline-start: 0;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_circle-brick, $selector, $append)} {
-          border-start-start-radius: 100px;
-          border-start-end-radius: 0;
-          border-end-start-radius: 100px;
-          border-end-end-radius: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_circle-brick, $selector, $append)} {
+      border-start-start-radius: 100px;
+      border-start-end-radius: 0;
+      border-end-start-radius: 100px;
+      border-end-end-radius: 0;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_brick-circle, $selector, $append)} {
-          border-start-start-radius: 0;
-          border-start-end-radius: 100px;
-          border-end-start-radius: 0;
-          border-end-end-radius: 100px;
-      }
+    &#{get-pin-selector(#{$block}_pin_brick-circle, $selector, $append)} {
+      border-start-start-radius: 0;
+      border-start-end-radius: 100px;
+      border-end-start-radius: 0;
+      border-end-end-radius: 100px;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_circle-clear, $selector, $append)} {
-          border-start-start-radius: 100px;
-          border-start-end-radius: 0;
-          border-end-start-radius: 100px;
-          border-end-end-radius: 0;
-          border-inline-end: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_circle-clear, $selector, $append)} {
+      border-start-start-radius: 100px;
+      border-start-end-radius: 0;
+      border-end-start-radius: 100px;
+      border-end-end-radius: 0;
+      border-inline-end: 0;
+    }
 
-      &#{get-pin-selector(#{$block}_pin_clear-circle, $selector, $append)} {
-          border-start-start-radius: 0;
-          border-start-end-radius: 100px;
-          border-end-start-radius: 0;
-          border-end-end-radius: 100px;
-          border-inline-start: 0;
-      }
+    &#{get-pin-selector(#{$block}_pin_clear-circle, $selector, $append)} {
+      border-start-start-radius: 0;
+      border-start-end-radius: 100px;
+      border-end-start-radius: 0;
+      border-end-end-radius: 100px;
+      border-inline-start: 0;
+    }
   }
 }
 
@@ -309,13 +309,16 @@
   font-weight: var(--g-text-accent-font-weight);
 }
 
-@mixin loading($loading-color-1: rgba(255, 255, 255, 0.3), $loading-color-2: transparent) {
+@mixin loading(
+  $loading-color-1: rgba(255, 255, 255, 0.3),
+  $loading-color-2: transparent
+) {
   background-image: repeating-linear-gradient(
-      -45deg,
-      $loading-color-1,
-      $loading-color-1 4px,
-      $loading-color-2 4px,
-      $loading-color-2 8px
+    -45deg,
+    $loading-color-1,
+    $loading-color-1 4px,
+    $loading-color-2 4px,
+    $loading-color-2 8px
   );
   background-size: 150%;
   background-clip: padding-box;
@@ -326,31 +329,39 @@
 
 @mixin input-control($size) {
   --_--input-control-border-width: var(
-      --g-text-input-border-width,
-      var(--g-text-area-border-width, 1px)
+    --g-text-input-border-width,
+    var(--g-text-area-border-width, 1px)
   );
   @if $size == 's' {
-      @include text-body-short;
+    @include text-body-short;
 
-      height: calc(#{variables.$s-height} - var(--_--input-control-border-width) * 2);
-      padding: 3px 8px;
+    height: calc(
+      #{variables.$s-height} - var(--_--input-control-border-width) * 2
+    );
+    padding: 3px 8px;
   }
   @if $size == 'm' {
-      @include text-body-short;
+    @include text-body-short;
 
-      height: calc(#{variables.$m-height} - var(--_--input-control-border-width) * 2);
-      padding: 5px 8px;
+    height: calc(
+      #{variables.$m-height} - var(--_--input-control-border-width) * 2
+    );
+    padding: 5px 8px;
   }
   @if $size == 'l' {
-      @include text-body-short;
+    @include text-body-short;
 
-      height: calc(#{variables.$l-height} - var(--_--input-control-border-width) * 2);
-      padding: 9px 12px;
+    height: calc(
+      #{variables.$l-height} - var(--_--input-control-border-width) * 2
+    );
+    padding: 9px 12px;
   }
   @if $size == 'xl' {
-      @include text-body-2;
+    @include text-body-2;
 
-      height: calc(#{variables.$xl-height} - var(--_--input-control-border-width) * 2);
-      padding: 11px 12px;
+    height: calc(
+      #{variables.$xl-height} - var(--_--input-control-border-width) * 2
+    );
+    padding: 11px 12px;
   }
 }
