@@ -179,7 +179,7 @@ LANDING_BLOCK-->
 
 ## Icons
 
-To add an icon to the `Button`, you should use the [`Icon`](../Icon) component, a special wrapper for SVGs.
+<!-- To add an icon to the `Button`, you should use the [`Icon`](../Icon) component, a special wrapper for SVGs. -->
 
 <!--LANDING_BLOCK
 
