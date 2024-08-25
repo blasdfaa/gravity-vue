@@ -310,6 +310,13 @@ $block: '.#{variables.$ns}text-input';
 
   &_size {
     &_s {
+      --_additional-content-height: var(--_text-input-control-height-s);
+
+      --_error-icon-padding-block: 5px;
+      --_error-icon-padding-inline: 0 5px;
+
+      --_border-radius: var(--g-border-radius-s);
+
       #{$block}__control {
         @include mixins.input-control(s);
       }
@@ -329,17 +336,15 @@ $block: '.#{variables.$ns}text-input';
       #{$block}__additional-content_placement_end {
         padding-inline-end: 1px;
       }
-
-      --_additional-content-height: var(--_text-input-control-height-s);
-
-      --_error-icon-padding-block: 5px;
-      --_error-icon-padding-inline: 0 5px;
-
-      --_border-radius: var(--g-border-radius-s);
     }
 
     &_m {
       --_additional-content-height: var(--_text-input-control-height-m);
+
+      --_error-icon-padding-block: 5px;
+      --_error-icon-padding-inline: 0 5px;
+
+      --_border-radius: var(--g-border-radius-m);
 
       #{$block}__control {
         @include mixins.input-control(m);
@@ -360,14 +365,16 @@ $block: '.#{variables.$ns}text-input';
       #{$block}__additional-content_placement_end {
         padding-inline-end: 1px;
       }
-
-      --_error-icon-padding-block: 5px;
-      --_error-icon-padding-inline: 0 5px;
-
-      --_border-radius: var(--g-border-radius-m);
     }
 
     &_l {
+      --_additional-content-height: var(--_text-input-control-height-l);
+
+      --_error-icon-padding-block: 9px;
+      --_error-icon-padding-inline: 0 9px;
+
+      --_border-radius: var(--g-border-radius-l);
+
       #{$block}__control {
         @include mixins.input-control(l);
       }
@@ -387,16 +394,16 @@ $block: '.#{variables.$ns}text-input';
       #{$block}__additional-content_placement_end {
         padding-inline-end: 3px;
       }
-
-      --_additional-content-height: var(--_text-input-control-height-l);
-
-      --_error-icon-padding-block: 9px;
-      --_error-icon-padding-inline: 0 9px;
-
-      --_border-radius: var(--g-border-radius-l);
     }
 
     &_xl {
+      --_additional-content-height: var(--_text-input-control-height-xl);
+
+      --_error-icon-padding-block: 13px;
+      --_error-icon-padding-inline: 0 13px;
+
+      --_border-radius: var(--g-border-radius-xl);
+
       #{$block}__control {
         @include mixins.input-control(xl);
       }
@@ -416,13 +423,6 @@ $block: '.#{variables.$ns}text-input';
       #{$block}__additional-content_placement_end {
         padding-inline-end: 3px;
       }
-
-      --_additional-content-height: var(--_text-input-control-height-xl);
-
-      --_error-icon-padding-block: 13px;
-      --_error-icon-padding-inline: 0 13px;
-
-      --_border-radius: var(--g-border-radius-xl);
     }
   }
 
