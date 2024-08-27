@@ -1,12 +1,14 @@
-<script setup lang="ts">
-import { useBlock } from '../../composables'
+<script lang="ts">
 import type { QAProps } from '../../types'
 import type { SpinSize } from './types'
+import { useBlock } from '../../composables'
 
 export interface SpinProps extends QAProps {
   size: SpinSize
 }
+</script>
 
+<script setup lang="ts">
 withDefaults(defineProps<SpinProps>(), {
   size: 'm',
 })
