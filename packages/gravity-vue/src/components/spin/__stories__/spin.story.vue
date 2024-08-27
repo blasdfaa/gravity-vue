@@ -3,7 +3,7 @@ import Spin from '../spin.vue'
 </script>
 
 <template>
-  <Story group="components" title="Inputs / Spin">
+  <Story group="components" title="Feedback / Spin">
     <Variant title="Basic">
       <Spin />
     </Variant>
