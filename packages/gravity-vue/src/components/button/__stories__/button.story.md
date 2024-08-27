@@ -44,9 +44,17 @@ LANDING_BLOCK-->
 <!--GITHUB_BLOCK-->
 
 ```vue
-<Button view="action" size="l">Action</Button>
-<Button view="normal" size="l">Normal</Button>
-<Button view="raised" size="l">Raised</Button>
+<Button view="action" size="l">
+Action
+</Button>
+
+<Button view="normal" size="l">
+Normal
+</Button>
+
+<Button view="raised" size="l">
+Raised
+</Button>
 ```
 
 <!--/GITHUB_BLOCK-->
@@ -85,13 +93,33 @@ LANDING_BLOCK-->
 <!--GITHUB_BLOCK-->
 
 ```vue
-<Button view="outlined" size="l">Outlined</Button>
-<Button view="outlined-action" size="l">Outlined Action</Button>
-<Button view="outlined-info" size="l">Outlined Info</Button>
-<Button view="outlined-success" size="l">Outlined Success</Button>
-<Button view="outlined-warning" size="l">Outlined Warning</Button>
-<Button view="outlined-danger" size="l">Outlined Danger</Button>
-<Button view="outlined-utility" size="l">Outlined Utility</Button>
+<Button view="outlined" size="l">
+Outlined
+</Button>
+
+<Button view="outlined-action" size="l">
+Outlined Action
+</Button>
+
+<Button view="outlined-info" size="l">
+Outlined Info
+</Button>
+
+<Button view="outlined-success" size="l">
+Outlined Success
+</Button>
+
+<Button view="outlined-warning" size="l">
+Outlined Warning
+</Button>
+
+<Button view="outlined-danger" size="l">
+Outlined Danger
+</Button>
+
+<Button view="outlined-utility" size="l">
+Outlined Utility
+</Button>
 ```
 
 <!--/GITHUB_BLOCK-->
@@ -134,14 +162,37 @@ LANDING_BLOCK-->
 <!--GITHUB_BLOCK-->
 
 ```vue
-<Button view="flat" size="l">Flat</Button>
-<Button view="flat-secondary" size="l">Flat Secondary</Button>
-<Button view="flat-action" size="l">Flat Action</Button>
-<Button view="flat-info" size="l">Flat Info</Button>
-<Button view="flat-success" size="l">Flat Success</Button>
-<Button view="flat-warning" size="l">Flat Warning</Button>
-<Button view="flat-danger" size="l">Flat Danger</Button>
-<Button view="flat-utility" size="l">Flat Utility</Button>
+<Button view="flat" size="l">
+Flat
+</Button>
+
+<Button view="flat-secondary" size="l">
+Flat Secondary
+</Button>
+
+<Button view="flat-action" size="l">
+Flat Action
+</Button>
+
+<Button view="flat-info" size="l">
+Flat Info
+</Button>
+
+<Button view="flat-success" size="l">
+Flat Success
+</Button>
+
+<Button view="flat-warning" size="l">
+Flat Warning
+</Button>
+
+<Button view="flat-danger" size="l">
+Flat Danger
+</Button>
+
+<Button view="flat-utility" size="l">
+Flat Utility
+</Button>
 ```
 
 <!--/GITHUB_BLOCK-->
@@ -170,9 +221,17 @@ LANDING_BLOCK-->
 <!--GITHUB_BLOCK-->
 
 ```vue
-<Button view="normal-contrast" size="l">Normal Contrast</Button>
-<Button view="outlined-contrast" size="l">Outlined Contrast</Button>
-<Button view="flat-contrast" size="l">Flat Contrast</Button>
+<Button view="normal-contrast" size="l">
+Normal Contrast
+</Button>
+
+<Button view="outlined-contrast" size="l">
+Outlined Contrast
+</Button>
+
+<Button view="flat-contrast" size="l">
+Flat Contrast
+</Button>
 ```
 
 <!--/GITHUB_BLOCK-->
@@ -243,15 +302,18 @@ LANDING_BLOCK-->
     <Icon data={Gear} size={18} />
     Start
 </Button>
+
 <Button view="outlined" size="l">
     End
     <Icon data={Gear} size={18} />
 </Button>
+
 <Button view="outlined" size="l">
     <Icon data={Gear} size={18} />
     Both
     <Icon data={Gear} size={18} />
 </Button>
+
 <Button view="outlined" size="l">
     No text:
     <Icon data={Gear} size={18} />
@@ -287,9 +349,17 @@ LANDING_BLOCK-->
 <!--GITHUB_BLOCK-->
 
 ```vue
-<Button size="l" disabled>Disabled</Button>
-<Button size="l" loading>Loading</Button>
-<Button size="l" selected>Selected</Button>
+<Button size="l" disabled>
+Disabled
+</Button>
+
+<Button size="l" loading>
+Loading
+</Button>
+
+<Button size="l" selected>
+Selected
+</Button>
 ```
 
 <!--/GITHUB_BLOCK-->
@@ -321,11 +391,25 @@ LANDING_BLOCK-->
 <!--GITHUB_BLOCK-->
 
 ```vue
-<Button size="xs">XS Size</Button>
-<Button size="s">S Size</Button>
-<Button size="m">M Size</Button>
-<Button size="l">L Size</Button>
-<Button size="xl">XL Size</Button>
+<Button size="xs">
+XS Size
+</Button>
+
+<Button size="s">
+S Size
+</Button>
+
+<Button size="m">
+M Size
+</Button>
+
+<Button size="l">
+L Size
+</Button>
+
+<Button size="xl">
+XL Size
+</Button>
 ```
 
 <!--/GITHUB_BLOCK-->
@@ -431,11 +515,13 @@ LANDING_BLOCK-->
     <Button view="action" size="l" pin="round-brick">Create</Button>
     <Button view="action" size="l" pin="brick-round">...</Button>
 </div>
+
 <div>
     <Button view="normal" size="l" pin="circle-clear">Start</Button>
     <Button view="normal" size="l" pin="brick-brick" selected>Center</Button>
     <Button view="normal" size="l" pin="clear-circle">End</Button>
 </div>
+
 <div>
     <Button view="outlined" pin="brick-clear">1</Button>
     <Button view="outlined" pin="clear-clear">2</Button>

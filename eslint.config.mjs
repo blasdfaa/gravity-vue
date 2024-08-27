@@ -8,7 +8,6 @@ export default antfu({
   markdown: true,
   stylistic: true,
   regexp: true,
-  type: 'lib',
   formatters: {
     css: true,
   },

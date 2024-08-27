@@ -36,6 +36,7 @@ LANDING_BLOCK-->
 
 ```vue
 <TextInput view="normal" />
+
 <TextInput view="clear" />
 ```
 
@@ -63,7 +64,9 @@ LANDING_BLOCK-->
 
 ```vue
 <TextInput pin="round-brick" />
+
 <TextInput pin="brick-brick" />
+
 <TextInput pin="brick-round" />
 ```
 
@@ -114,6 +117,7 @@ LANDING_BLOCK-->
 
 ```vue
 <TextInput errorMessage="Error message" validationState="invalid" />
+
 <TextInput errorPlacement="inside" errorMessage="Error message" validationState="invalid" />
 ```
 
@@ -149,8 +153,11 @@ LANDING_BLOCK-->
 
 ```vue
 <TextInput size="s" />
+
 <TextInput size="m" />
+
 <TextInput size="l" />
+
 <TextInput size="xl" />
 ```
 
