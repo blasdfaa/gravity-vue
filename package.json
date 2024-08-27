@@ -16,17 +16,17 @@
   },
   "scripts": {
     "story:dev": "pnpm --filter gravity-vue story:dev --open",
-    "build": "pnpm run build:packages",
-    "prepublishOnly": "pnpm run publint && pnpm run build",
-    "build:packages": "pnpm run build:vue",
+    "prepublishOnly": "pnpm run test:package && pnpm run build",
+    "build": "pnpm run /^build:/",
     "build:vue": "pnpm --filter gravity-vue build",
     "lint": "eslint . --cache",
     "lint:fix": "pnpm run lint --fix",
     "release": "bumpp -r && pnpm publish",
     "prepare": "simple-git-hooks",
-    "publint": "publint",
-    "typecheck": "pnpm --filter './packages/*' -r run typecheck",
-    "test": "pnpm --filter gravity-vue test"
+    "test:ts": "pnpm --filter './packages/*' -r run typecheck",
+    "test:package": "publint",
+    "test:vitest": "pnpm --filter gravity-vue test",
+    "test": "pnpm run /^test:/"
   },
   "publishConfig": {
     "access": "public"
