@@ -3,6 +3,7 @@ import Button from '../button.vue'
 import type { ButtonPin, ButtonSize, ButtonView } from '../types'
 
 const qa = 'button'
+const label = 'Button'
 
 const buttonSizes: ButtonSize[] = ['xs', 's', 'm', 'l', 'xl']
 const buttonViews: ButtonView[] = ['normal', 'action', 'outlined', 'outlined-info', 'outlined-danger', 'raised', 'flat', 'flat-info', 'flat-danger', 'flat-secondary', 'normal-contrast', 'outlined-contrast', 'flat-contrast']
@@ -44,5 +45,19 @@ describe('button.vue', () => {
     const button = wrapper.get(`[data-qa=${qa}]`)
 
     expect(button.attributes().type).toEqual(type)
+  })
+
+  it('render button with label prop', () => {
+    const wrapper = mount(Button, { props: { label } })
+
+    expect(wrapper.html()).toContain(label)
+  })
+
+  it('render button with label prop and default slot', () => {
+    const defaultSlot = 'I\'m default slot'
+
+    const wrapper = mount(Button, { props: { label }, slots: { default: defaultSlot } })
+
+    expect(wrapper.html()).toContain(defaultSlot)
   })
 })
