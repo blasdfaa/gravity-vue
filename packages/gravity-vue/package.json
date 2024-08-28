@@ -34,7 +34,7 @@
   "scripts": {
     "build": "vite build",
     "test": "vitest --run",
-    "test:only": "vitest -w -t ",
+    "test:watch": "vitest",
     "typecheck": "vue-tsc",
     "story:dev": "histoire dev",
     "story:build": "histoire build",
