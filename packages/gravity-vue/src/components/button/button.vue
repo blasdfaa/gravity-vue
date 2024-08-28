@@ -61,7 +61,7 @@ const { b } = useBlock('button')
       <slot name="iconStart" />
     </span>
 
-    <span v-if="slots?.default" :class="b('text')">
+    <span :class="b('text')">
       <slot>{{ label }}</slot>
     </span>
 
