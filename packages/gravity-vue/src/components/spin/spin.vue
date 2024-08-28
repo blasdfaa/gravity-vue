@@ -4,7 +4,7 @@ import type { SpinSize } from './types'
 import { useBlock } from '../../composables'
 
 export interface SpinProps extends QAProps {
-  size: SpinSize
+  size?: SpinSize
 }
 </script>
 
