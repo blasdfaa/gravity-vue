@@ -9,7 +9,7 @@ import Button from '../button.vue'
     </Variant>
 
     <Variant title="Playground">
-      <Button>feqfe</Button>
+      <Button label="Button" />
     </Variant>
   </Story>
 </template>
