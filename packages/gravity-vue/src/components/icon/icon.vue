@@ -3,8 +3,9 @@ import type { QAProps } from '../../types'
 import type { Component } from 'vue'
 import { computed, ref } from 'vue'
 import { block } from '../../utils/cn'
+import type { SVGIconSpriteData } from './types'
 
-export type IconData = string | Component | { id: string, url?: string, viewBox: string }
+export type IconData = string | Component<SVGIconSpriteData>
 
 export interface IconProps extends QAProps {
   data: IconData
