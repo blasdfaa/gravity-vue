@@ -127,6 +127,7 @@ const noteId = useId()
         :class="b('label')"
       />
       <input
+        :id="id"
         v-model="modelValue"
         :class="b('control', { type: 'input' })"
         v-bind="attrs"
