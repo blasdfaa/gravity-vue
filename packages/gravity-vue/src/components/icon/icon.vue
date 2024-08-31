@@ -1,11 +1,11 @@
 <script lang="ts">
 import type { QAProps } from '../../types'
-import type { Component } from 'vue'
+import type { Component, VNode } from 'vue'
 import { computed, ref } from 'vue'
 import { block } from '../../utils/cn'
 import type { SVGIconSpriteData } from './types'
 
-export type IconData = string | Component<SVGIconSpriteData>
+export type IconData = string | Component | ((ctx: any, cache: any) => VNode)
 
 export interface IconProps extends QAProps {
   data: IconData
@@ -30,7 +30,8 @@ const iconPrefix = ref('')
 
 const isString = (data: IconData): data is string => typeof data === 'string'
 const isComponent = (data: IconData): data is Component => typeof data === 'object' && !('id' in data)
-function isSpriteData(data: IconData): data is { id: string, url?: string, viewBox: string } {
+const isFunction = (data: IconData): data is (ctx: any, cache: any) => VNode => typeof data === 'function'
+function isSpriteData(data: IconData): data is SVGIconSpriteData {
   return typeof data === 'object' && 'id' in data && 'viewBox' in data
 }
 
@@ -43,7 +44,7 @@ const dimensions = computed(() => {
   if (isSpriteData(props.data)) {
     viewBox = props.data.viewBox
   }
-  else if (isComponent(props.data)) {
+  else if (isComponent(props.data) || isFunction(props.data)) {
     w = w || '1em'
     h = h || '1em'
   }
@@ -92,6 +93,7 @@ defineExpose({
     <use :href="href" :xlink:href="href" />
   </svg>
   <component :is="data" v-else-if="isComponent(data)" v-bind="svgProps" />
+  <component :is="data" v-else-if="isFunction(data)" v-bind="svgProps" />
 </template>
 
 <style lang="scss">

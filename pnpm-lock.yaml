@@ -62,6 +62,9 @@ importers:
       '@bem-react/classname':
         specifier: ^1.6.0
         version: 1.6.0
+      '@gravity-vue/icons':
+        specifier: ^0.0.1
+        version: 0.0.1(vue@3.4.35(typescript@5.5.4))
       '@vueuse/core':
         specifier: ^11.0.0
         version: 11.0.3(vue@3.4.35(typescript@5.5.4))
@@ -616,6 +619,14 @@ packages:
   '@eslint/object-schema@2.1.4':
     resolution: {integrity: sha512-BsWiH1yFGjXXS2yvrf5LyuoSIIbPrGUWob917o+BTKuZ7qJdxX8aJLRxs1fS9n6r7vESrq1OUqb68dANcFXuQQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+
+  '@gravity-vue/icons@0.0.1':
+    resolution: {integrity: sha512-vJi38OifElnU7ky9/XrUY/ozs/DPZupYXY1e1RgpP5hpdFvLEzN24i1ZT7bi+tMw3pCARkwyuxJFsvCn9XV19g==}
+    peerDependencies:
+      vue: '*'
+    peerDependenciesMeta:
+      vue:
+        optional: true
 
   '@histoire/app@0.17.17':
     resolution: {integrity: sha512-2i1V38o08V+eaR0d3L0/EA6AYG14xyQBJbyYv0Hz3r4sH3Elj1FoJiwolbCfTDmkOnSgwWTc7+JoCqkLIbxfhA==}
@@ -4067,6 +4078,10 @@ snapshots:
   '@eslint/js@9.8.0': {}
 
   '@eslint/object-schema@2.1.4': {}
+
+  '@gravity-vue/icons@0.0.1(vue@3.4.35(typescript@5.5.4))':
+    optionalDependencies:
+      vue: 3.4.35(typescript@5.5.4)
 
   '@histoire/app@0.17.17(vite@5.3.5(@types/node@22.5.0)(sass@1.77.8))':
     dependencies:
