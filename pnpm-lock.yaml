@@ -65,6 +65,9 @@ importers:
       '@bem-react/classname':
         specifier: ^1.6.0
         version: 1.6.0
+      '@gravity-vue/icons':
+        specifier: ^0.0.1
+        version: 0.0.1(vue@3.4.35)
       '@vueuse/core':
         specifier: ^11.0.0
         version: 11.0.3(vue@3.4.35)
@@ -1086,6 +1089,17 @@ packages:
 
   /@floating-ui/utils@0.2.7:
     resolution: {integrity: sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==}
+    dev: false
+
+  /@gravity-vue/icons@0.0.1(vue@3.4.35):
+    resolution: {integrity: sha512-vJi38OifElnU7ky9/XrUY/ozs/DPZupYXY1e1RgpP5hpdFvLEzN24i1ZT7bi+tMw3pCARkwyuxJFsvCn9XV19g==}
+    peerDependencies:
+      vue: '*'
+    peerDependenciesMeta:
+      vue:
+        optional: true
+    dependencies:
+      vue: 3.4.35(typescript@5.5.4)
     dev: false
 
   /@histoire/app@0.17.17(vite@5.3.5):
