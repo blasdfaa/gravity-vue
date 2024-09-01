@@ -1,4 +1,4 @@
-import type { DefineComponent, SVGAttributes } from 'vue'
+import type { Component, DefineComponent, SVGAttributes, VNode } from 'vue'
 
 export interface SVGIconSpriteData {
   id: string
@@ -6,7 +6,7 @@ export interface SVGIconSpriteData {
   viewBox: string
 }
 
-export type SVGIconComponentData = DefineComponent<SVGAttributes>
+export type SVGIconComponentData = Component | VNode
 
 export type SVGIconStringData = string
 
@@ -17,3 +17,9 @@ export type SVGIconData =
   | SVGIconSpriteData
   | SVGIconSvgrData
   | SVGIconStringData
+
+export type SVGDementions = {
+  width?: number | string
+  height?: number | string
+  size?: number | string
+}
