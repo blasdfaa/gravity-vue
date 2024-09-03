@@ -49,10 +49,17 @@ import Avatar from '../avatar.vue'
       />
     </Variant>
 
+    <Variant title="Outlined">
+      <Avatar
+        view="outlined"
+        text="Charles Darwin"
+      />
+    </Variant>
+
     <Variant title="With border">
       <Avatar
         img-url="https://loremflickr.com/640/480/cats"
-        :style="{ borderColor: 'var(--g-color-line-misc)' }"
+        border-color="var(--g-color-line-misc)"
       />
     </Variant>
   </Story>
