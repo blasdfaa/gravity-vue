@@ -41,6 +41,7 @@ export interface AvatarProps extends QAProps, PolymorphicProps,
 import { avatarSizeToIconSize, avatarSizeToImgSize } from './constants'
 import { useBlock } from '../../composables'
 import { getInitials } from './utils'
+import { Icon } from '../icon'
 
 const props = withDefaults(defineProps<AvatarProps>(), {
   size: 'm',
