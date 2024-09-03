@@ -3,9 +3,9 @@ export {
   type IconProps,
 } from './icon.vue'
 export type {
-  SVGIconData,
-  SVGIconSvgrData,
   SVGIconComponentData,
   SVGIconSpriteData,
   SVGIconStringData,
+  IconData,
+  SVGDementions,
 } from './types'
