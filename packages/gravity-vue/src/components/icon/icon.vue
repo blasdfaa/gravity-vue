@@ -1,14 +1,12 @@
 <script lang="ts">
 import type { QAProps } from '../../types'
 import { computed } from 'vue'
-import type { SVGDementions, SVGIconData } from './types'
+import type { IconData, SVGDementions } from './types'
 import { useBlock } from '../../composables'
 import { getDementions, isComponentSvgData, isSpriteData, isStringSvgData, prepareStringData } from './utils'
 
-export type IconData = SVGIconData
-
 export interface IconProps extends QAProps, SVGDementions {
-  data: SVGIconData
+  data: IconData
   fill?: string
   stroke?: string
   class?: string

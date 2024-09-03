@@ -1,25 +1,20 @@
 import type {
+  IconData,
   SVGDementions,
   SVGIconComponentData,
-  SVGIconData,
   SVGIconSpriteData,
   SVGIconStringData,
-  SVGIconSvgrData,
 } from './types'
 
-export function isSpriteData(data: SVGIconData): data is SVGIconSpriteData {
+export function isSpriteData(data: IconData): data is SVGIconSpriteData {
   return typeof data === 'object'
 }
 
-export function isSvgrData(data: SVGIconData): data is SVGIconSvgrData {
-  return typeof data === 'function' && (!data.prototype || !data.prototype.render)
-}
-
-export function isComponentSvgData(data: SVGIconData): data is SVGIconComponentData {
+export function isComponentSvgData(data: IconData): data is SVGIconComponentData {
   return (typeof data === 'object' || typeof data === 'function')
 }
 
-export function isStringSvgData(data: SVGIconData): data is SVGIconStringData {
+export function isStringSvgData(data: IconData): data is SVGIconStringData {
   return typeof data === 'string'
 }
 export function prepareStringData(data: SVGIconStringData) {
@@ -37,7 +32,7 @@ export function getStringViewBox(data: SVGIconStringData) {
   return match ? match[2] : undefined
 }
 
-export function getDementions({ width, height, size, data }: SVGDementions & { data: SVGIconData }) {
+export function getDementions({ width, height, size, data }: SVGDementions & { data: IconData }) {
   let w = size || width
   let h = size || height
 
