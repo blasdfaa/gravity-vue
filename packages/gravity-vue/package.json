@@ -12,12 +12,16 @@
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
       }
     },
-    "./styles.css": "./dist/style.css",
-    "./package.json": "./package.json"
+    "./package.json": "./package.json",
+    "./styles.css": "./dist/style.css"
   },
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "typesVersions": {
@@ -57,6 +61,7 @@
     "@histoire/plugin-vue": "^0.17.17",
     "@vitejs/plugin-vue": "^5.1.2",
     "@vue/test-utils": "^2.4.6",
+    "globby": "^14.0.2",
     "histoire": "^0.17.17",
     "sass": "^1.77.8",
     "simple-git-hooks": "^2.11.1",
