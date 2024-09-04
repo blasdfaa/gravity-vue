@@ -16,6 +16,7 @@
   },
   "scripts": {
     "story:dev": "pnpm --filter gravity-vue story:dev --open",
+    "nuxt:dev": "pnpm --filter gravity-nuxt dev",
     "prepublishOnly": "pnpm run test:package && pnpm run build",
     "build": "pnpm run /^build:/",
     "build:vue": "pnpm --filter gravity-vue build",
@@ -23,6 +24,7 @@
     "lint:fix": "pnpm run lint --fix",
     "release": "bumpp -r && pnpm publish",
     "prepare": "simple-git-hooks",
+    "dev:nuxt": "pnpm --filter gravity-nuxt dev",
     "test:ts": "pnpm --filter './packages/*' -r run typecheck",
     "test:package": "publint",
     "test:vitest": "pnpm --filter gravity-vue test",
