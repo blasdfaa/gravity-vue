@@ -6,13 +6,17 @@
   "publishConfig": {
     "access": "public"
   },
+  "sideEffects": false,
   "exports": {
     ".": {
-      "import": "./dist/module.mjs",
-      "require": "./dist/module.cjs"
+      "types": "./dist/module.d.mts",
+      "require": "./dist/module.cjs",
+      "default": "./dist/module.mjs"
     }
   },
-  "main": "./dist/module.cjs",
+  "main": "dist/module.mjs",
+  "module": "dist/module.mjs",
+  "types": "dist/module.d.ts",
   "files": [
     "dist"
   ],

@@ -3,15 +3,7 @@ import { addComponent, createResolver, defineNuxtModule, resolvePath } from '@nu
 import { join } from 'node:path'
 import { readFileSync, readdirSync } from 'node:fs'
 import { parseSync } from '@oxc-parser/wasm'
-// import 'gravity-vue/styles.css'
-
-export interface ModuleOptions {
-  /**
-   * Include default component styles
-   * @default true
-   */
-  css?: boolean
-}
+import type { ModuleOptions } from './types'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
