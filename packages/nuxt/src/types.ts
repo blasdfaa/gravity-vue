@@ -8,9 +8,9 @@ export interface ModuleOptions {
 
 declare module '@nuxt/schema' {
   interface NuxtConfig {
-    nuxtUI?: ModuleOptions
+    gravity?: ModuleOptions
   }
   interface NuxtOptions {
-    nuxtUI?: ModuleOptions
+    gravity?: ModuleOptions
   }
 }

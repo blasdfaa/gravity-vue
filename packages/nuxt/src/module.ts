@@ -8,7 +8,7 @@ import type { ModuleOptions } from './types'
 export default defineNuxtModule<ModuleOptions>({
   meta: {
     name: 'gravity-ui',
-    configKey: 'gravityUI',
+    configKey: 'gravity',
   },
   defaults: {
     css: true,
