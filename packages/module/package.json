@@ -24,7 +24,8 @@
   },
   "dependencies": {
     "@nuxt/kit": "^3.13.1",
-    "@oxc-parser/wasm": "^0.26.0"
+    "@oxc-parser/wasm": "^0.26.0",
+    "gravity-vue": "workspace:*"
   },
   "devDependencies": {
     "@nuxt/module-builder": "^0.8.3",

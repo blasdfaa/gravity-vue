@@ -1,11 +1,9 @@
-<script setup lang="ts">
-import 'gravity-nuxt/dist/style.css'
-</script>
-
 <template>
-  <Button>
-    кнопка
-  </Button>
+  <ThemeProvider>
+    <Button>
+      кнопка
+    </Button>
 
-  <Spin size="xl" />
+    <Spin size="xl" />
+  </ThemeProvider>
 </template>

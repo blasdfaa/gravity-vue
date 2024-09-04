@@ -117,6 +117,9 @@ importers:
       '@oxc-parser/wasm':
         specifier: ^0.26.0
         version: 0.26.0
+      gravity-vue:
+        specifier: workspace:*
+        version: link:../gravity-vue
     devDependencies:
       '@nuxt/module-builder':
         specifier: ^0.8.3
