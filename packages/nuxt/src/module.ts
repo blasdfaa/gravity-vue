@@ -1,8 +1,5 @@
-import { addComponent, createResolver, defineNuxtModule, resolvePath } from '@nuxt/kit'
-
-import { join } from 'node:path'
-import { readFileSync, readdirSync } from 'node:fs'
-import { parseSync } from '@oxc-parser/wasm'
+import { addComponent, defineNuxtModule } from '@nuxt/kit'
+import { components } from 'gravity-vue'
 import type { ModuleOptions } from './types'
 
 export default defineNuxtModule<ModuleOptions>({
@@ -13,61 +10,45 @@ export default defineNuxtModule<ModuleOptions>({
   defaults: {
     css: true,
   },
+  // eslint-disable-next-line unused-imports/no-unused-vars
   async setup(options, nuxt) {
-    const { resolve } = createResolver(__dirname)
+    Object.keys(components).forEach((name) => {
+      addComponent({
+        name,
+        export: name,
+        filePath: 'gravity-vue',
+      })
+    })
 
-    const COMPONENT_DIR_PATH = resolve('../../gravity-vue/src/components')
-    const PROVIDERS_DIR_PATH = resolve('../../gravity-vue/src/providers')
+    // Рабочий вариант
+    // const componentNames = Object.keys(components)
 
-    // Получение списка всех компонентов в директории
-    const components = readdirSync(COMPONENT_DIR_PATH).filter(component => !component.includes('.ts'))
+    // componentNames.push('ThemeProvider')
 
-    // После фильтрации добавляем провайдер темы
-    components.push('theme')
+    // if (options.css) {
+    //   nuxt.options.css.push('gravity-vue/styles.css')
+    // }
 
-    if (options.css) {
-      nuxt.options.css.push('gravity-vue/styles.css')
-    }
+    // const gravityVuePath = dirname(require.resolve('gravity-vue/package.json'))
 
-    try {
-      components
-        .forEach(async (dir) => {
-          try {
-            const filePath = await resolvePath(join(COMPONENT_DIR_PATH, dir, 'index'), { extensions: ['.ts', '.js'] })
-            const themeProviderFilePath = await resolvePath(join(PROVIDERS_DIR_PATH, 'theme', 'index'), { extensions: ['.ts', '.js'] })
-            const themeOrComponentPath = dir === 'theme' ? themeProviderFilePath : filePath
+    // try {
+    //   componentNames.forEach((name) => {
+    //     const nameAsKebabCase = kebabCase(name)
+    //     const componentPath = name === 'ThemeProvider'
+    //       ? join(gravityVuePath, 'src', 'providers', 'theme')
+    //       : join(gravityVuePath, 'src', 'components', nameAsKebabCase)
 
-            const content = readFileSync(themeOrComponentPath, { encoding: 'utf8' })
-            const ast = parseSync(content, {
-              sourceType: 'module',
-              sourceFilename: themeOrComponentPath,
-            })
-
-            const exportedKeys: string[] = ast.program.body
-              .filter(node => node.type === 'ExportNamedDeclaration')
-            // @ts-expect-error parse return any
-              .flatMap(node => node.specifiers.map(specifier => specifier.exported.name))
-              .filter((key: string) => /^[A-Z]/.test(key))
-
-            exportedKeys.forEach((key) => {
-              addComponent({
-                name: key,
-                export: key,
-                filePath: resolve(themeOrComponentPath),
-              })
-            })
-          }
-          catch (err) {
-            if (err instanceof Error) {
-              console.warn('Module error: ', err.message)
-            }
-          }
-        })
-    }
-    catch (err) {
-      if (err instanceof Error) {
-        console.warn(err.message)
-      }
-    }
+    //     addComponent({
+    //       name,
+    //       export: name,
+    //       filePath: componentPath,
+    //     })
+    //   })
+    // }
+    // catch (err) {
+    //   if (err instanceof Error) {
+    //     console.warn(`Error adding component: ${err.message}`)
+    //   }
+    // }
   },
 })

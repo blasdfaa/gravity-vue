@@ -4,6 +4,6 @@
       кнопка
     </Button>
 
-    <Spin size="xl" />
+    <Spin />
   </ThemeProvider>
 </template>

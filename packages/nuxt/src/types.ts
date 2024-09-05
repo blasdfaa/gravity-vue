@@ -10,7 +10,4 @@ declare module '@nuxt/schema' {
   interface NuxtConfig {
     gravity?: ModuleOptions
   }
-  interface NuxtOptions {
-    gravity?: ModuleOptions
-  }
 }
