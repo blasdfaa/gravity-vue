@@ -19,6 +19,7 @@
     "prepublishOnly": "pnpm run test:package && pnpm run build",
     "build": "pnpm run /^build:/",
     "build:vue": "pnpm --filter gravity-vue build",
+    "build:nuxt": "pnpm --filter nuxt build",
     "lint": "eslint . --cache",
     "lint:fix": "pnpm run lint --fix",
     "release": "bumpp -r && pnpm publish",

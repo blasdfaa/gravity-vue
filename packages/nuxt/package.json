@@ -1,0 +1,41 @@
+{
+  "name": "@gravity-vue/nuxt",
+  "version": "0.0.0",
+  "description": "Add Gravity UI module to Nuxt",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/module.d.mts",
+      "require": "./dist/module.cjs",
+      "default": "./dist/module.mjs"
+    }
+  },
+  "main": "dist/module.mjs",
+  "module": "dist/module.mjs",
+  "types": "dist/module.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "nuxt-module-build build",
+    "dev": "nuxi dev playground",
+    "dev:build": "nuxi build playground",
+    "dev:prepare": "nuxt-module-build build --stub && nuxt-module-build prepare && nuxi prepare playground"
+  },
+  "peerDependencies": {
+    "gravity-vue": "workspace:^"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^3.13.1",
+    "@oxc-parser/wasm": "^0.26.0"
+  },
+  "devDependencies": {
+    "@nuxt/module-builder": "^0.8.3",
+    "@nuxt/schema": "^3.13.1",
+    "nuxt": "^3.13.1"
+  }
+}
