@@ -107,7 +107,7 @@ LANDING_BLOCK-->
 | Name         | Description                                 |                                    Type                                     |   Default    |
 | :----------- | :------------------------------------------ | :-------------------------------------------------------------------------: | :----------: |
 | type         | Avatar appearance                           |                       `'person'` `'email'` `'empty'`                        |  `'person'`  |
-| avatar       | User avatar                                 | [AvatarProps](../../avatar/__stories__/avatar.story.md#properties) `string` `React.ReactElement` |              |
+| avatar       | User avatar                                 | [AvatarProps](../../avatar/__stories__/avatar.story.md) `string` `React.ReactElement` |              |
 | children     | Visible text                                |                              `React.ReactNode`                              |              |
 | view         | UserLabel view                              |                           `'outlined'` `'clear'`                            | `'outlined'` |
 | onClick      | `click` event handler for component itself  |                                 `Function`                                  |              |
