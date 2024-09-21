@@ -87,11 +87,11 @@ watch(
       @error="handleError"
     >
 
-    <div v-if="icon" :style="{ color }" :class="b('icon')">
+    <div v-else-if="icon" :style="{ color }" :class="b('icon')">
       <Icon :data="icon" :size="iconSize" />
     </div>
 
-    <div v-if="text" :style="{ color }" :class="b('text')">
+    <div v-else-if="text" :style="{ color }" :class="b('text')">
       {{ displayText }}
     </div>
   </div>
@@ -99,22 +99,11 @@ watch(
 
 <style lang="scss">
 @use '../../styles/variables';
-@use 'sass:map';
-
-$sizes: (
-  'xs': 24px,
-  's': 28px,
-  'm': 32px,
-  'l': 42px,
-  'xl': 50px,
-);
-
-$default-size: map.get($sizes, 'm');
 
 $block: '.#{variables.$ns}avatar';
 
 #{$block} {
-  --_size: $default-size;
+  --_size: variables.$avatar-default-size;
   --_background-color: var(--g-color-base-misc-light);
   --_border-color: currentColor;
   --_color: var(--g-color-text-misc);
@@ -176,7 +165,7 @@ $block: '.#{variables.$ns}avatar';
   }
 
   &_size {
-    @each $size-name, $size-value in $sizes {
+    @each $size-name, $size-value in variables.$avatar-sizes {
       &_#{$size-name} {
         --_size: #{$size-value};
       }
