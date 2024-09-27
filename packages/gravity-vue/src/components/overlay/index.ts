@@ -1,4 +1,4 @@
 export {
-  default as Overlay,
+  default as GOverlay,
   type OverlayProps,
 } from './overlay.vue'

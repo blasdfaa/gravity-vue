@@ -41,7 +41,7 @@ export interface AvatarProps extends QAProps, PolymorphicProps,
 import { avatarSizeToIconSize, avatarSizeToImgSize } from './constants'
 import { useBlock } from '../../composables'
 import { getInitials } from './utils'
-import { Icon } from '../icon'
+import { GIcon } from '../icon'
 
 const props = withDefaults(defineProps<AvatarProps>(), {
   size: 'm',
@@ -88,7 +88,7 @@ watch(
     >
 
     <div v-else-if="icon" :style="{ color }" :class="b('icon')">
-      <Icon :data="icon" :size="iconSize" />
+      <GIcon :data="icon" :size="iconSize" />
     </div>
 
     <div v-else-if="text" :style="{ color }" :class="b('text')">

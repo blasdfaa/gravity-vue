@@ -7,7 +7,7 @@ export type ClearButtonProps = {
 </script>
 
 <script setup lang="ts">
-import { Button, type ButtonSize } from '../button'
+import { type ButtonSize, GButton } from '../button'
 
 defineProps<ClearButtonProps>()
 
@@ -15,7 +15,7 @@ const { b } = useBlock('clear-button')
 </script>
 
 <template>
-  <Button
+  <GButton
     :size="size"
     :class="b()"
   />

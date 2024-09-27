@@ -1,5 +1,5 @@
 export {
-  default as Icon,
+  default as GIcon,
   type IconProps,
 } from './icon.vue'
 export type {

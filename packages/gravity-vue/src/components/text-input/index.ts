@@ -1,4 +1,4 @@
 export {
-  default as TextInput,
+  default as GTextInput,
   type TextInputProps,
 } from './text-input.vue'

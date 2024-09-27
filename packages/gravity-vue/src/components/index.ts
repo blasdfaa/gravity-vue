@@ -1,3 +1,4 @@
+export * from './avatar'
 export * from './button'
 export * from './text-input'
 export * from './overlay'

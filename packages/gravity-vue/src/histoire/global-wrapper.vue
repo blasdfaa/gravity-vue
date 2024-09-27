@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import type { Story, Variant } from 'histoire'
-import { ThemeProvider } from '../providers/theme'
+import { GThemeProvider } from '../providers/theme'
 
 defineProps<{
   story: Story
@@ -9,7 +9,7 @@ defineProps<{
 </script>
 
 <template>
-  <ThemeProvider theme="dark">
+  <GThemeProvider theme="dark">
     <slot />
-  </ThemeProvider>
+  </GThemeProvider>
 </template>
