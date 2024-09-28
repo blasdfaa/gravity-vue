@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { Button } from '../../button'
-import { TextInput } from '../../text-input'
+import { GButton } from '../../button'
+import { GTextInput } from '../../text-input'
 import Text from '../text.vue'
 
 const loremText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates asperiores accusamus est, ab rerum harum hic delectus fuga veniam! Hic, atque, quia sunt consectetur eius corrupti, expedita sapiente exercitationem aperiam quibusdam libero ipsa veritatis quisquam! Debitis eos unde, blanditiis ipsam adipisci, soluta incidunt architecto quidem, repellat commodi tempore! Enim assumenda nam esse laudantium sequi quaerat maiores, voluptatum quibusdam temporibus nulla perspiciatis! Corrupti error aliquid iure asperiores voluptate. Nisi temporibus nesciunt quasi animi, accusamus officia debitis voluptatum ratione ullam delectus, adipisci, repellendus vitae in amet sit magni iste impedit? Exercitationem rerum impedit sed earum iusto modi et officia aspernatur quibusdam? Fugit.'
@@ -58,7 +58,7 @@ const loremText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vol
           </label>
         </Text>
 
-        <TextInput id="some-id" />
+        <GTextInput id="some-id" />
       </div>
     </Variant>
 
@@ -77,9 +77,9 @@ const loremText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vol
         </Text>
 
         <Text color="danger-heavy" variant="header-1" as-child>
-          <Button size="m" view="action">
+          <GButton size="m" view="action">
             Hello World!
-          </Button>
+          </GButton>
         </Text>
       </div>
     </Variant>

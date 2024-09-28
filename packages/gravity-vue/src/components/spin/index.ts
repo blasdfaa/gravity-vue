@@ -1,5 +1,5 @@
 export {
-  default as Spin,
+  default as GSpin,
   type SpinProps,
 } from './spin.vue'
 export type {

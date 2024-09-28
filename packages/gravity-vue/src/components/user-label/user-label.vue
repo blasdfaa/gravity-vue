@@ -21,10 +21,10 @@ export type UserLabelEmits = {
 <script setup lang="ts">
 import { computed, getCurrentInstance } from 'vue'
 import { useBlock } from '../../composables'
-import { Icon } from '../icon'
+import { GIcon } from '../icon'
 import { Envelope, Xmark } from '@gravity-vue/icons'
 import { slotIsText } from '../../utils/slot-is-text'
-import { Avatar } from '../avatar'
+import { GAvatar } from '../avatar'
 
 const props = withDefaults(defineProps<UserLabelProps>(), {
   size: 's',
@@ -83,7 +83,7 @@ const handleClick = (e: MouseEvent) => emits('click', e)
       @click="handleClick"
     >
       <div v-if="type !== 'empty'" :class="b('avatar')">
-        <Avatar v-bind="avatarProps" :size="size" />
+        <GAvatar v-bind="avatarProps" :size="size" />
       </div>
       <div :class="b('text')">
         <slot />
@@ -96,7 +96,7 @@ const handleClick = (e: MouseEvent) => emits('click', e)
       type="button"
       @click="(e) => emits('close', e)"
     >
-      <Icon :class="b('close-icon')" :data="Xmark" :size="12" />
+      <GIcon :class="b('close-icon')" :data="Xmark" :size="12" />
     </button>
   </div>
 </template>

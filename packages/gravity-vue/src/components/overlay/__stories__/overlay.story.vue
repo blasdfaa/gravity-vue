@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { Spin } from '../../spin'
+import { GSpin } from '../../spin'
 import Overlay, { type OverlayProps } from '../overlay.vue'
 
 const state = ref<OverlayProps>({
@@ -30,7 +30,7 @@ const state = ref<OverlayProps>({
         <div>Example of overlay</div>
         <div>with spin</div>
         <Overlay v-bind="state">
-          <Spin />
+          <GSpin />
         </Overlay>
       </div>
     </Variant>

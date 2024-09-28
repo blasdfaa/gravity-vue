@@ -1,5 +1,5 @@
 export {
-  default as Button,
+  default as GButton,
   type ButtonProps,
 } from './button.vue'
 export type {
