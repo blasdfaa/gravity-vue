@@ -1,0 +1,32 @@
+{
+  "name": "@gravity-vue/icons",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "Viktor Zdorovtsev",
+  "license": "MIT",
+  "funding": "https://github.com/sponsors/blasdfaa",
+  "homepage": "https://github.com/blasdfaa/gravity-vue#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blasdfaa/gravity-vue.git"
+  },
+  "bugs": "https://github.com/blasdfaa/gravity-vue/issues",
+  "keywords": [],
+  "sideEffects": false,
+  "exports": {
+    "import": "./dist/index.js"
+  },
+  "main": "./dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "pnpx tsx scripts/build.ts",
+    "prepack": "pnpm build",
+    "release": "pnpm test && bumpp && pnpm publish",
+    "test": "publint"
+  },
+  "devDependencies": {
+    "@types/node": "22.9.3"
+  }
+}
