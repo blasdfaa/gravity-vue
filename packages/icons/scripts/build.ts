@@ -20,7 +20,6 @@ function createOutputDirectory() {
   fs.mkdirSync(OUTPUT_DIR, { recursive: true })
 }
 
-// Преобразование имени файла в имя компонента
 function getComponentName(fileName: string) {
   return fileName
     .replace(/\.svg$/, '')
@@ -29,21 +28,18 @@ function getComponentName(fileName: string) {
     .join('')
 }
 
-// Обработка содержимого SVG
 function processSvgContent(content: string) {
   return content
     .replace(/\n/g, ' ')
-    .replace(/<!--.*?-->/g, '') // Удаление комментариев
-    .replace(/\s+/g, ' ') // Нормализация пробелов
+    .replace(/<!--.*?-->/g, '')
+    .replace(/\s+/g, ' ')
     .trim()
     .replace(/width="[^"]*"/, 'width="1em"')
     .replace(/height="[^"]*"/, 'height="1em"')
-    // Добавляем поддержку кастомного цвета через props
     .replace(/fill="([^"]+)"/g, ':fill="color"')
     .replace(/stroke="([^"]+)"/g, ':stroke="color"')
 }
 
-// Шаблон Vue компонента
 function generateVueComponent(name: string, svgContent: string) {
   return `<template>
   ${svgContent}
@@ -62,7 +58,6 @@ export default {
 </script>`
 }
 
-// Создание индексного файла
 function generateIndexFile(componentNames: string[]) {
   const imports = componentNames
     .map(name => `export { default as ${name} } from './${name}.vue';`)
@@ -71,7 +66,6 @@ function generateIndexFile(componentNames: string[]) {
   return `${imports}\n`
 }
 
-// Основная функция для конвертации
 function convertSvgToVueComponents() {
   if (!fs.existsSync(INPUT_DIR)) {
     throw new Error(`Input directory ${INPUT_DIR} does not exist`)
