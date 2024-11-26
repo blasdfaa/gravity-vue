@@ -56,9 +56,6 @@ importers:
 
   packages/gravity-vue:
     dependencies:
-      '@antfu/utils':
-        specifier: ^0.7.10
-        version: 0.7.10
       '@ark-ui/vue':
         specifier: 3.7.2
         version: 3.7.2(vue@3.4.35(typescript@5.5.4))
@@ -66,8 +63,8 @@ importers:
         specifier: ^1.6.0
         version: 1.6.0
       '@gravity-vue/icons':
-        specifier: ^0.0.1
-        version: 0.0.1(vue@3.4.35(typescript@5.5.4))
+        specifier: 1.0.0
+        version: 1.0.0
       '@vueuse/core':
         specifier: ^11.0.0
         version: 11.0.3(vue@3.4.35(typescript@5.5.4))
@@ -1079,13 +1076,8 @@ packages:
   '@floating-ui/utils@0.2.7':
     resolution: {integrity: sha512-X8R8Oj771YRl/w+c1HqAC1szL8zWQRwFvgDwT129k9ACdBoud/+/rX9V0qiMl6LWUdP9voC2nDVZYPMQQsb6eA==}
 
-  '@gravity-vue/icons@0.0.1':
-    resolution: {integrity: sha512-vJi38OifElnU7ky9/XrUY/ozs/DPZupYXY1e1RgpP5hpdFvLEzN24i1ZT7bi+tMw3pCARkwyuxJFsvCn9XV19g==}
-    peerDependencies:
-      vue: '*'
-    peerDependenciesMeta:
-      vue:
-        optional: true
+  '@gravity-vue/icons@1.0.0':
+    resolution: {integrity: sha512-bKi9reRD8azaiNfjrAfXvBGIYmUo87qJOGpjIK74HxCghfPNqj7ki/fIOR0IG9vjqT5YHyTGqHpgrAXWDjgGsg==}
 
   '@histoire/app@0.17.17':
     resolution: {integrity: sha512-2i1V38o08V+eaR0d3L0/EA6AYG14xyQBJbyYv0Hz3r4sH3Elj1FoJiwolbCfTDmkOnSgwWTc7+JoCqkLIbxfhA==}
@@ -6833,9 +6825,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.7': {}
 
-  '@gravity-vue/icons@0.0.1(vue@3.4.35(typescript@5.5.4))':
-    optionalDependencies:
-      vue: 3.4.35(typescript@5.5.4)
+  '@gravity-vue/icons@1.0.0': {}
 
   '@histoire/app@0.17.17(vite@5.3.5(@types/node@22.9.3)(sass@1.77.8)(terser@5.31.6))':
     dependencies:
